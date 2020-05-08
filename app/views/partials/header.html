@@ -1,0 +1,15 @@
+<!-- start: NAVBAR  -->
+<div class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <!-- start: Logo -->
+        <div class="navbar-header">
+            <a class="sidebar-mobile-toggler pull-left hidden-md hidden-lg" ng-click="toggle('sidebar')" class="btn btn-navbar sidebar-toggle"> <i class="ti-align-justify"></i> </a>
+            <a class="navbar-brand header-logo-container" ui-sref="app.dashboard">
+                <img ng-src="{{app.logo}}" alt="{{app.name}}" id="header-logo">
+            </a>
+        </div>
+        <!-- Navigation  -->
+        <div data-ng-include="'views/partials/nav.html'" class="main-content"></div>
+        <!-- / Navigation -->
+    </div>
+</div>

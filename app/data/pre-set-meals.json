@@ -1,0 +1,50 @@
+[
+  {
+    "id":1,
+    "meal":"Burger",
+    "image":"/images/big-mac.png",
+    "price": 10.00
+  },
+  {
+    "id":2,
+    "meal":"Cheese Burger",
+    "image":"/images/big-mac.png",
+    "price": 2.00
+  },
+  {
+    "id":3,
+    "meal":"Happy Meal",
+    "image":"/images/big-mac.png",
+    "price": 7.00
+  },
+  {
+    "id":4,
+    "meal":"Fries",
+    "image":"/images/big-mac.png",
+    "price": 3.00
+  },
+  {
+    "id":5,
+    "meal":"Burger",
+    "image":"/images/big-mac.png",
+    "price": 10.00
+  },
+  {
+    "id":6,
+    "meal":"Cheese Burger",
+    "image":"/images/big-mac.png",
+    "price": 2.00
+  },
+  {
+    "id":7,
+    "meal":"Happy Meal",
+    "image":"/images/big-mac.png",
+    "price": 7.00
+  },
+  {
+    "id":8,
+    "meal":"Fries",
+    "image":"/images/big-mac.png",
+    "price": 3.00
+  }
+]

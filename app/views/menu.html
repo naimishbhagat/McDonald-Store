@@ -1,0 +1,17 @@
+<div class="main-container banner" ng-controller="menuController">
+    <div class="headtitle">
+        <div class="container">
+            <div class="col-xs-12 text-center">
+                <span class="text-weight-medium">Please select meal from below menu, </span><span class="text-weight-heavy text-capitalize" ng-bind="userInfo.first_name"></span>
+            </div>
+            <div data-ng-repeat="menu in menus">
+                <menu-list-single menu="menu"></menu-list-single>
+            </div>
+            <div class="row" ng-show="menus.length ==0">
+                <div class="text-center messagebg padding-2">
+                    There are no menus available.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

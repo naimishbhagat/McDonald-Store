@@ -1,0 +1,14 @@
+<div class="col-sm-6 col-md-3">
+    <div class="panel panel-white">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <h2>{{menu.meal}}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="panel-primary"> <img src="{{menu.image}}" alt="{{menu.meal}}" class="img-thumbnail img-responsive"> </div>
+        <div class="price text-center">${{menu.price}} </div>
+        <div class="text-center"> <a ng-click="addtocart(menu)" class="btn btn-danger">Add to cart</a></div>
+    </div>
+</div>

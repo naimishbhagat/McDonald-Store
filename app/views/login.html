@@ -1,0 +1,36 @@
+<!-- start: LOGIN -->
+<div class="banner-questionnaire-dark">
+    <div class="container">
+        <div class="row padding-top-30 padding-bottom-30" ng-controller="loginController">
+            <div class=" col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 full-height v-align-center font-size-0">
+                <!-- start: LOGIN BOX -->
+                <div class="main-login block margin-bottom-6">
+                    <div class="box-login">
+                    <form class="" name="loginform" ng-submit="login(loginform)" ng-validate="validationOptions">
+                        <h2 class="text-center margin-bottom-1 color-white text-weight-standard">Login to McDonald Store</h2>
+                        <div class="form-group">
+                            <input type="text" class="form-control input-lg border-radius-0" name="username" placeholder="Username:" ng-model="user.username">
+                        </div>
+                        <div class="form-group form-actions">
+                            <input type="password" class="form-control input-lg password border-radius-0" name="password" placeholder="Password:" ng-model="user.password">
+                        </div>
+                        <div class="form-actions padding-bottom-30 margin-bottom-30">
+                            <div class="row">
+                                <div class="text-center">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <button type="submit" class="btn btn-danger btn-block btn-x-medium">
+                                            Login <i class="fa fa-arrow-circle-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+                <!-- end: LOGIN BOX -->
+            </div>
+        </div>
+        <!-- end: LOGIN -->
+    </div>
+</div>
