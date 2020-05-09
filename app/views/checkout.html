@@ -6,7 +6,7 @@
                 <p>Please fill the form below to purchase this delicious meal.</p>
             </div>
             <div class="col-xs-12">
-                <form method="post" ng-submit="signup(checkoutform)" id="checkoutform">
+                <form method="post" ng-submit="signup(checkoutform)" name="checkoutform"  ng-validate="validationOptions">
                     <div class="row">
                         <div class="form-group col-sm-6">
                             <input type="text" class="form-control input-lg border-radius-0" name="first_name" placeholder="First name:" ng-model="user.first_name">
