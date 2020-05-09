@@ -17,7 +17,6 @@ mcDonaldApp.controller('dashboardController', ['$scope','$state', '$http','$loca
             }
             var order =  $filter('filter')( $scope.myOrders, {id: id},true);
             var selectedMenu = order[0].meal;
-            console.log(selectedMenu);
             $localStorage.cart.push(selectedMenu);
 
         }
