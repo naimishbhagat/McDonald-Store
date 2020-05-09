@@ -29,7 +29,7 @@
                                 <td>${{ item.price }}</td>
                                 <td><input type="hidden" value="{{item.id}}" name="id" /><input type="number" ng-model="item.qty" class="qty" style="width:50px;" name="qty" /></td>
                                 <td ng-bind="item_total(item)">$0.00</td>
-                                <td><a ng-click="remove_item(item.id)" class="btn btn-danger del">Del</a></td>
+                                <td><a ng-click="remove_item(item.id)" class="btn btn-danger del">Delete</a></td>
                             </tr>
                         </tbody>
                         <tfoot>

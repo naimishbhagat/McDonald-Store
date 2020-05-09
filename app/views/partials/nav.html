@@ -7,6 +7,9 @@
         <li ng-class="{'active': $state.includes('app.dashboard')}" ng-show="userInfo !== null">
             <a data-ui-sref="app.dashboard">Dashboard</a>
         </li>
+        <li ng-class="{'active': $state.includes('app.create_meal')}">
+            <a data-ui-sref="app.create_meal">Create Your Own Meal</a>
+        </li>
         <li ng-class="{'active': $state.includes('app.menu')}">
             <a data-ui-sref="app.menu">Pre-Set Meal</a>
         </li>

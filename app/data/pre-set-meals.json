@@ -1,50 +1,50 @@
 [
   {
     "id":1,
-    "meal":"Burger",
-    "image":"/images/big-mac.png",
-    "price": 10.00
+    "meal":"Big Mac® Combo Meal.",
+    "image":"/images/big-mac-combo.jpg",
+    "price": 20.00
   },
   {
     "id":2,
-    "meal":"Cheese Burger",
-    "image":"/images/big-mac.png",
-    "price": 2.00
+    "meal":"Cheeseburger Combo Meal.",
+    "image":"/images/cheeseburger-combo.jpg",
+    "price": 12.00
   },
   {
     "id":3,
-    "meal":"Happy Meal",
-    "image":"/images/big-mac.png",
-    "price": 7.00
+    "meal":"Quarter Pounder with Cheese Meal",
+    "image":"/images/quarter-ponder.jpg",
+    "price": 17.00
   },
   {
     "id":4,
-    "meal":"Fries",
-    "image":"/images/big-mac.png",
-    "price": 3.00
+    "meal":"Artisan Grilled Chicken Sandwich Meal",
+    "image":"/images/artisan-grilled-chicken.jpg",
+    "price": 13.00
   },
   {
     "id":5,
-    "meal":"Burger",
-    "image":"/images/big-mac.png",
-    "price": 10.00
+    "meal":"Buttermilk Crispy Chicken Sandwich meal",
+    "image":"/images/butter-milk-sandwich.jpg",
+    "price": 15.00
   },
   {
     "id":6,
-    "meal":"Cheese Burger",
-    "image":"/images/big-mac.png",
-    "price": 2.00
+    "meal":"10 piece chicken McNuggets Meal",
+    "image":"/images/10-chicken-nuggets.jpg",
+    "price": 12.00
   },
   {
     "id":7,
     "meal":"Happy Meal",
-    "image":"/images/big-mac.png",
-    "price": 7.00
+    "image":"/images/happy-hamburger.jpeg",
+    "price": 12.00
   },
   {
     "id":8,
-    "meal":"Fries",
-    "image":"/images/big-mac.png",
-    "price": 3.00
+    "meal":"Sausage, Egg & cheese McGriddles Meal",
+    "image":"/images/sausage-egg-cheese-meals.jpg",
+    "price": 13.00
   }
 ]

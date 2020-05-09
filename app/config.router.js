@@ -40,6 +40,10 @@ mcDonaldApp.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider
             url: "/dashboard",
             templateUrl: "views/dashboard.html",
             title: 'Dashboard',
+        }).state('app.create_meal', {
+            url: "/create-meal",
+            templateUrl: "views/create_meal.html",
+            title: 'Dashboard',
         }).state('app.menu', {
             url: "/menu",
             templateUrl: "views/menu.html",
