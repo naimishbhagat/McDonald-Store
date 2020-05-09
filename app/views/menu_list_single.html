@@ -8,7 +8,7 @@
     </div>
     <div class="panel-body">
         <div class="panel-primary"> <img src="{{menu.image}}" alt="{{menu.meal}}" class="img-thumbnail img-responsive"> </div>
-        <div class="price text-center">${{menu.price}} </div>
-        <div class="text-center"> <a ng-click="addtocart(menu)" class="btn btn-danger">Add to cart</a></div>
+        <div class="price text-center"><h3>${{menu.price}}</h3> </div>
+        <div class="text-center"><input type="number" name="qty" ng-model="menu.qty" value="0" class="input-sm" min="0" max="" style="width: 45px;"> <a ng-click="addtocart(menu)" class="btn btn-danger">Add to cart</a></div>
     </div>
 </div>

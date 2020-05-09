@@ -12,6 +12,7 @@ mcDonaldApp.controller('mainCtrl', ['$rootScope', '$scope', '$state', '$localSto
         $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
             //start loading bar on stateChangeStart
             $rootScope.loggedin = false;
+            $rootScope.cart = [];
             $rootScope.role = '';
             if (toState.external) {
                 event.preventDefault();
@@ -33,6 +34,13 @@ mcDonaldApp.controller('mainCtrl', ['$rootScope', '$scope', '$state', '$localSto
                 $rootScope.userInfo = $localStorage.userInfo;
             }else{
                 $rootScope.userInfo = null;
+            }
+
+            if ($localStorage.cart == 'undefined' || $localStorage.cart == null) {
+                $rootScope.cart = [];
+                $localStorage.cart = [];
+            } else {
+                $rootScope.cart = $localStorage.cart;
             }
 
             $('footer').show();

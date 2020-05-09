@@ -4,6 +4,48 @@
             <div class="col-xs-12 text-center">
                 <span class="text-weight-medium">Cart, </span><span class="text-weight-heavy text-capitalize" ng-bind="userInfo.first_name"></span>
             </div>
+            <div class="col-xs-12">
+                <form action="" method="post" id="cartform">
+                    <table width="100%" class="table table-bordered table-striped">
+                        <thead>
+                            <tr style="background-color: #fff;"><td colspan="6" style="text-align:right">
+                                <a href="/cart/clear/" class="clearcart subbutton" style="margin-right:20px;">Clear Cart>></a>
+                                <a href="/cart/update/" style="margin-right:10px;"class="updatecart subbutton">Update Cart</a></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Qty</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat="item in cart">
+                                <td><img src="{{ item.image }}" alt="{{item.meal}}" class="img-thumbnail" width="60" /> </td>
+                                <td>{{ item.meal }}</td>
+                                <td>${{ item.price }}</td>
+                                <td><input type="hidden" value="{{item.id}}" name="id" /><input type="number" value="{{ item.qty }}" class="qty" style="widht:50px;" name="qty" /></td>
+                                <td ng-bind="total_price()">$0.00</td>
+                                <td><a ng-click="remove_item(item.id)" class="del"><img src="/static/img/delete.png"></a></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4"></td>
+                                <td>Total</td>
+                                <td ng-bind="total_cart">$0.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </form>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a href="#" ng-click="pay()"> Proceed to pay</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
