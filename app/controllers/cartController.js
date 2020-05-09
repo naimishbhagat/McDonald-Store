@@ -10,6 +10,24 @@ mcDonaldApp.controller('cartController', ['$scope','$state', '$http','$location'
             $state.go('app.checkout');
         };
 
+        $scope.continue = function(){
+            $state.go('app.menu');
+        };
+
+        $scope.item_total = function(item){
+            var item_total = 0;
+            item_total = item.qty * item.price;
+            return '$'+parseFloat(item_total).toFixed(2);
+        };
+
+        $scope.total_cart = function(){
+            var total = 0;
+            angular.forEach($scope.cart, function (item) {
+                total += (item.qty * item.price);
+            });
+            return '$'+total.toFixed(2);
+        }
+
         $scope.clearCart = function () {
             CartService.clear_cart().then(function(response){
                 $scope.cart = response;
