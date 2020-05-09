@@ -68,6 +68,75 @@
         }
       ]
     }
+  },
+  {
+    "id":4,
+    "user_id":2,
+    "order_date": "2020-05-09 13:00:00",
+    "meal":{
+      "id":9,
+      "qty": 1,
+      "name": "sumit-favourite-meal",
+      "items":[
+        {
+          "id":2,
+          "name":"Cheese Burger",
+          "image":"/images/cheese-burger.png"
+        },
+        {
+          "id":8,
+          "name":"Diet Coke",
+          "image":"/images/coke-classic.png"
+        },
+        {
+          "id":4,
+          "name":"Fries",
+          "image":"/images/fries.png"
+        }
+      ],
+      "price": 28
+    }
+  },
+  {
+    "id":5,
+    "user_id":2,
+    "order_date": "2020-05-09 13:00:00",
+    "meal":{
+      "id":10,
+      "qty": 1,
+      "name": "sumit-cheese-burger-meal",
+      "image":"/images/happy-hamburger.jpeg",
+      "items": [{"id":2,"meal":"Cheese Burger","image":"/images/cheese-burger.png","price":2,"qty":2}],
+      "price": 28
+    }
+  },
+  {
+    "id":6,
+    "user_id":2,
+    "order_date": "2020-05-09 13:00:00",
+    "meal":{
+      "id":7,
+      "qty": 1,
+      "name":"Sumit Happy Meal",
+      "image":"/images/happy-hamburger.jpeg",
+      "price": 12.00,
+      "items":[
+        {
+          "id":2,
+          "name":"Cheese Burger",
+          "image":"/images/cheese-burger.png"
+        },
+        {
+          "id":8,
+          "name":"Diet Coke",
+          "image":"/images/coke-classic.png"
+        },
+        {
+          "id":4,
+          "name":"Fries",
+          "image":"/images/fries.png"
+        }
+      ]
+    }
   }
-
 ]

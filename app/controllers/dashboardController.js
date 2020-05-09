@@ -5,7 +5,7 @@ mcDonaldApp.controller('dashboardController', ['$scope','$state', '$http','$loca
 
         // load pre saved orders
         OrderFactory.load_orders().then(function (response) {
-            $scope.myOrders= response.list;
+            $scope.myOrders=   $filter('filter')( response.list, {user_id: $scope.userInfo.id},true);
         });
 
         $scope.continue = function () {
