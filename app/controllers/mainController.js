@@ -2,8 +2,8 @@
 /**
  * Main Controller
  */
-mcDonaldApp.controller('mainCtrl', ['$rootScope', '$scope', '$state', '$localStorage', '$window', '$document', '$timeout','$templateCache','$cookies','$cookieStore','$filter',
-    function($rootScope, $scope, $state, $localStorage, $window, $document, $timeout,$templateCache,$cookies,$cookieStore,$filter) {
+mcDonaldApp.controller('mainCtrl', ['$rootScope', '$scope', '$state', '$localStorage', '$window', '$document', '$timeout','$templateCache','$cookies','$cookieStore','$filter','userFactory',
+    function($rootScope, $scope, $state, $localStorage, $window, $document, $timeout,$templateCache,$cookies,$cookieStore,$filter,userFactory) {
 
         // Loading bar transition
         // -----------------------------------
@@ -30,6 +30,7 @@ mcDonaldApp.controller('mainCtrl', ['$rootScope', '$scope', '$state', '$localSto
                 position : 'relative',
                 top : 'auto'
             });
+
             if($localStorage.userInfo != null){
                 $rootScope.userInfo = $localStorage.userInfo;
             }else{
@@ -41,6 +42,13 @@ mcDonaldApp.controller('mainCtrl', ['$rootScope', '$scope', '$state', '$localSto
                 $localStorage.cart = [];
             } else {
                 $rootScope.cart = $localStorage.cart;
+            }
+
+            //As we are using localstorage for existing users
+            if ($localStorage.users == 'undefined' || $localStorage.users == null || $localStorage.users.length == 0) {
+                userFactory.load_users().then(function (response) {
+                    $localStorage.users = response.list;
+                });
             }
 
             $('footer').show();

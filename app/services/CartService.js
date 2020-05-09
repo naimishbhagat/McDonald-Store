@@ -3,8 +3,8 @@ mcDonaldApp.factory("CartService", ['$rootScope','$http','$q',"$window",'$localS
 
         return {
             load_data: load_data,
-            add_item: add_item,
-            update_item: update_item,
+            clear_cart: clear_cart,
+            update_cart: update_cart,
             delete_item: delete_item
         };
 
@@ -16,23 +16,37 @@ mcDonaldApp.factory("CartService", ['$rootScope','$http','$q',"$window",'$localS
                 $localStorage.cart = [];
             } else {
                 $rootScope.cart = $localStorage.cart;
-
                 deferred.resolve($localStorage.cart);
             }
             return deferred.promise;
         }
 
-        function add_item(){
-
+        function clear_cart(){
+            var deferred = $q.defer();
+            $rootScope.cart = [];
+            $localStorage.cart = [];
+            deferred.resolve($localStorage.cart);
+            return deferred.promise;
         }
 
-
-        function update_item(){
-
+        function update_cart(data){
+            var deferred = $q.defer();
+            $rootScope.cart = $localStorage.cart;
+            $localStorage.cart = data;
+            deferred.resolve($localStorage.cart);
+            return deferred.promise;
         }
 
-        function delete_item(){
-
+        function delete_item(id){
+            var deferred = $q.defer();
+            var users = $filter('filter')($rootScope.cart, function(value, index, array) {
+                return (value.id !== id);
+            }, true);
+            console.log(id, users);
+            $rootScope.cart = users;
+            $localStorage.cart = users;
+            deferred.resolve($localStorage.cart);
+            return deferred.promise;
         }
     }
 ]);

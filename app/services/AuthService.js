@@ -17,9 +17,14 @@ mcDonaldApp.factory("AuthService", ['$rootScope','$http','$q',"$window",'$localS
 
         function login(username, password) {
             var deferred = $q.defer();
+
             userFactory.load_users().then(function(response) {
-                var users = $filter('filter')(response.list, {email: username, password: password},true);
-                console.log(users);
+                if( $localStorage.users == 'undefined' || $localStorage.users == null){
+                    var users = response.list;
+                }else{
+                    var users = $localStorage.users;
+                }
+                var users = $filter('filter')(users, {email: username, password: password},true);
                 if(users.length > 0 && users.length >! 2){
                     var userInfo = users[0];
                     $cookies.put("user_name",username);

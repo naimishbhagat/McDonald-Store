@@ -1,0 +1,42 @@
+<div class="main-container banner" ng-controller="checkoutController">
+    <div class="headtitle">
+        <div class="container">
+            <div class="col-xs-12 text-center">
+                <h2 class="header">Checkout Details:</h2>
+                <p>Please fill the form below to purchase this delicious meal.</p>
+            </div>
+            <div class="col-xs-12">
+                <form method="post" ng-submit="signup(checkoutform)" id="checkoutform">
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <input type="text" class="form-control input-lg border-radius-0" name="first_name" placeholder="First name:" ng-model="user.first_name">
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <input type="text" class="form-control input-lg border-radius-0" name="last_name" placeholder="Last name:" ng-model="user.last_name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg border-radius-0" name="email" placeholder="Email:" ng-model="user.email">
+                    </div>
+                    <div class="form-group form-actions">
+                        <input type="password" class="form-control input-lg password border-radius-0" name="password" placeholder="Password:" ng-model="user.password">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control input-lg border-radius-0" name="phone_number" placeholder="Phone:" ng-model="user.phone_number">
+                    </div>
+                    <div class="form-actions padding-bottom-30 margin-bottom-30">
+                        <div class="row">
+                            <div class="text-center">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <button type="submit" class="btn btn-danger">
+                                        Sign Up <i class="fa fa-arrow-circle-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

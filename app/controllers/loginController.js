@@ -3,6 +3,7 @@ mcDonaldApp.controller('loginController', ['$scope','$state', '$http','$location
         $scope.userInfo = null;
         $localStorage.userInfo = null;
         $scope.user = {};
+
         if($cookies.get('remember_me')){
             $scope.user.remember = true;
             $scope.user.username = $cookies.get('user_name');

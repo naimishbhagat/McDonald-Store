@@ -48,6 +48,10 @@ mcDonaldApp.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider
             url: "/cart",
             templateUrl: "views/cart.html",
             title: 'Cart',
+        }).state('app.checkout', {
+            url: "/checkout",
+            templateUrl: "views/checkout.html",
+            title: 'Checkout',
         }).state('error', {
             url: '/error',
             template: '<div ui-view class="fade-in-up"></div>'
