@@ -6,7 +6,7 @@
                 <p>Please fill the form below to purchase this delicious meal.</p>
             </div>
             <div class="col-xs-12">
-                <form method="post" ng-submit="signup(checkoutform)" id="checkoutform">
+                <form method="post" ng-submit="makePayment(paymentform)" id="paymentform">
                     <div class="creditCardForm">
                         <div class="heading">
                             <h1>Confirm Purchase</h1>
@@ -49,11 +49,6 @@
                                         <option value="20"> 2020</option>
                                         <option value="21"> 2021</option>
                                     </select>
-                                </div>
-                                <div class="form-group" id="credit_cards">
-                                    <img src="assets/images/visa.jpg" id="visa">
-                                    <img src="assets/images/mastercard.jpg" id="mastercard">
-                                    <img src="assets/images/amex.jpg" id="amex">
                                 </div>
                                 <div class="form-group" id="pay-now">
                                     <button type="submit" class="btn btn-default" id="confirm-purchase">Confirm</button>

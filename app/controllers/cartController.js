@@ -7,7 +7,11 @@ mcDonaldApp.controller('cartController', ['$scope','$state', '$http','$location'
 
         $scope.total_cart = 0;
         $scope.pay = function () {
-            $state.go('app.checkout');
+            if($localStorage.userInfo !=null){
+                $state.go('app.payment');
+            }else{
+                $state.go('app.checkout');
+            }
         };
 
         $scope.continue = function(){
