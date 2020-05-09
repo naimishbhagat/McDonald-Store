@@ -13,7 +13,7 @@
     "angular-cookies": "~1.6.5",
     "bootstrap": "^3.3.7",
     "html5-boilerplate": "0.0.1",
-    "jquery": "2.2.4",
+    "jquery": ">=3.5.0",
     "ngstorage": "^0.3.11",
     "oclazyload": "^1.1.0",
     "angular-resource": "1.6.5",
