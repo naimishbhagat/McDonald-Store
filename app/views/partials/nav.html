@@ -14,7 +14,7 @@
             <a data-ui-sref="app.menu">Pre-Set Meal</a>
         </li>
         <li ng-class="{'active': $state.includes('app.cart')}">
-            <a data-ui-sref="app.cart">Cart</a>
+            <a data-ui-sref="app.cart">Cart({{cart.length}})</a>
         </li>
         <li ng-class="{'active': $state.includes('app.login')}" ng-show="userInfo == null">
             <a data-ui-sref="app.login">Login</a>

@@ -1,55 +1,55 @@
 [
   {
     "id":1,
-    "meal":"Big Mac",
+    "name":"Big Mac",
     "image":"/images/big-mac.png",
     "price": 10.00
   },
   {
     "id":2,
-    "meal":"Cheese Burger",
+    "name":"Cheese Burger",
     "image":"/images/cheese-burger.png",
     "price": 2.00
   },
   {
     "id":3,
-    "meal":"Hamburger",
+    "name":"Hamburger",
     "image":"/images/hamburger.png",
     "price": 7.00
   },
   {
     "id":4,
-    "meal":"Fries",
+    "name":"Fries",
     "image":"/images/fries.png",
     "price": 3.00
   },
   {
     "id":5,
-    "meal":"Garden Salad",
+    "name":"Garden Salad",
     "image":"/images/garden-salad.png",
     "price": 10.00
   },
   {
     "id":6,
-    "meal":"Hash Brown",
+    "name":"Hash Brown",
     "image":"/images/hashbrown.png",
     "price": 2.00
   },
   {
     "id":7,
-    "meal":"Soft Serve",
+    "name":"Soft Serve",
     "image":"/images/soft-serve.png",
     "price": 1.50
   },
   {
     "id":8,
-    "meal":"Diet Coke",
+    "name":"Diet Coke",
     "image":"/images/coke-classic.png",
     "price": 3.00
   },
   {
     "id":9,
-    "meal":"Chocolate Frappe",
+    "name":"Chocolate Frappe",
     "image":"/images/frappe.png",
     "price": 3.00
   }

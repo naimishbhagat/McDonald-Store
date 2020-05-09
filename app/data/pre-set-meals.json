@@ -1,50 +1,186 @@
 [
   {
     "id":1,
-    "meal":"Big Mac® Combo Meal.",
+    "name":"Big Mac® Combo Meal.",
     "image":"/images/big-mac-combo.jpg",
-    "price": 20.00
+    "price": 20.00,
+    "items":[
+      {
+        "id":1,
+        "name":"Big Mac",
+        "image":"/images/big-mac.png"
+      },
+      {
+        "id":8,
+        "name":"Diet Coke",
+        "image":"/images/coke-classic.png"
+      },
+      {
+        "id":4,
+        "name":"Fries",
+        "image":"/images/fries.png"
+      }
+    ]
   },
   {
     "id":2,
-    "meal":"Cheeseburger Combo Meal.",
+    "name":"Cheeseburger Combo Meal.",
     "image":"/images/cheeseburger-combo.jpg",
-    "price": 12.00
+    "price": 12.00,
+    "items":[
+      {
+        "id":2,
+        "name":"Cheese Burger",
+        "image":"/images/cheese-burger.png"
+      },
+      {
+        "id":8,
+        "name":"Diet Coke",
+        "image":"/images/coke-classic.png"
+      },
+      {
+        "id":4,
+        "name":"Fries",
+        "image":"/images/fries.png"
+      }
+    ]
   },
   {
     "id":3,
-    "meal":"Quarter Pounder with Cheese Meal",
+    "name":"Quarter Pounder with Cheese Meal",
     "image":"/images/quarter-ponder.jpg",
-    "price": 17.00
+    "price": 17.00,
+    "items":[
+      {
+        "id":2,
+        "name":"Cheese Burger",
+        "image":"/images/cheese-burger.png"
+      },
+      {
+        "id":8,
+        "name":"Diet Coke",
+        "image":"/images/coke-classic.png"
+      },
+      {
+        "id":4,
+        "name":"Fries",
+        "image":"/images/fries.png"
+      }
+    ]
   },
   {
     "id":4,
-    "meal":"Artisan Grilled Chicken Sandwich Meal",
+    "name":"Artisan Grilled Chicken Sandwich Meal",
     "image":"/images/artisan-grilled-chicken.jpg",
-    "price": 13.00
+    "price": 13.00,
+    "items":[
+      {
+        "id":2,
+        "name":"Cheese Burger",
+        "image":"/images/cheese-burger.png"
+      },
+      {
+        "id":8,
+        "name":"Diet Coke",
+        "image":"/images/coke-classic.png"
+      },
+      {
+        "id":4,
+        "name":"Fries",
+        "image":"/images/fries.png"
+      }
+    ]
   },
   {
     "id":5,
-    "meal":"Buttermilk Crispy Chicken Sandwich meal",
+    "name":"Buttermilk Crispy Chicken Sandwich meal",
     "image":"/images/butter-milk-sandwich.jpg",
-    "price": 15.00
+    "price": 15.00,
+    "items":[
+      {
+        "id":2,
+        "name":"Cheese Burger",
+        "image":"/images/cheese-burger.png"
+      },
+      {
+        "id":8,
+        "name":"Diet Coke",
+        "image":"/images/coke-classic.png"
+      },
+      {
+        "id":4,
+        "name":"Fries",
+        "image":"/images/fries.png"
+      }
+    ]
   },
   {
     "id":6,
-    "meal":"10 piece chicken McNuggets Meal",
+    "name":"10 piece chicken McNuggets Meal",
     "image":"/images/10-chicken-nuggets.jpg",
-    "price": 12.00
+    "price": 12.00,
+    "items":[
+      {
+        "id":2,
+        "name":"Cheese Burger",
+        "image":"/images/cheese-burger.png"
+      },
+      {
+        "id":8,
+        "name":"Diet Coke",
+        "image":"/images/coke-classic.png"
+      },
+      {
+        "id":4,
+        "name":"Fries",
+        "image":"/images/fries.png"
+      }
+    ]
   },
   {
     "id":7,
-    "meal":"Happy Meal",
+    "name":"Happy Meal",
     "image":"/images/happy-hamburger.jpeg",
-    "price": 12.00
+    "price": 12.00,
+    "items":[
+      {
+        "id":2,
+        "name":"Cheese Burger",
+        "image":"/images/cheese-burger.png"
+      },
+      {
+        "id":8,
+        "name":"Diet Coke",
+        "image":"/images/coke-classic.png"
+      },
+      {
+        "id":4,
+        "name":"Fries",
+        "image":"/images/fries.png"
+      }
+    ]
   },
   {
     "id":8,
-    "meal":"Sausage, Egg & cheese McGriddles Meal",
+    "name":"Sausage, Egg & cheese McGriddles Meal",
     "image":"/images/sausage-egg-cheese-meals.jpg",
-    "price": 13.00
+    "price": 13.00,
+    "items":[
+      {
+        "id":2,
+        "name":"Cheese Burger",
+        "image":"/images/cheese-burger.png"
+      },
+      {
+        "id":8,
+        "name":"Diet Coke",
+        "image":"/images/coke-classic.png"
+      },
+      {
+        "id":4,
+        "name":"Fries",
+        "image":"/images/fries.png"
+      }
+    ]
   }
 ]

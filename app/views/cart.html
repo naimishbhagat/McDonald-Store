@@ -25,7 +25,7 @@
                         <tbody>
                             <tr data-ng-repeat="item in cart">
                                 <td><img src="{{ item.image }}" alt="{{item.meal}}" class="img-thumbnail" width="60" /> </td>
-                                <td>{{ item.meal }}</td>
+                                <td>{{ item.name }}</td>
                                 <td>${{ item.price }}</td>
                                 <td><input type="hidden" value="{{item.id}}" name="id" /><input type="number" ng-model="item.qty" class="qty" style="width:50px;" name="qty" /></td>
                                 <td ng-bind="item_total(item)">$0.00</td>
