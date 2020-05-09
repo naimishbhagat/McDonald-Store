@@ -1,18 +1,19 @@
-mcDonaldApp.controller('dashboardController', ['$scope','$state', '$http','$location','$localStorage','$window','$cookies',
-    function ($scope,$state, $http,$location,$localStorage,$window,$cookies) {
+mcDonaldApp.controller('dashboardController', ['$scope','$state', '$http','$location','$localStorage','$window','$cookies','OrderFactory',
+    function ($scope,$state, $http,$location,$localStorage,$window,$cookies,OrderFactory) {
         $scope.userInfo = $localStorage.userInfo;
-        console.log($scope.userInfo);
         $scope.user = {};
-        if($cookies.get('remember_me')){
-            $scope.user.remember = true;
-            $scope.user.username = $cookies.get('user_name');
-            $scope.user.password = $cookies.get('user_password');
-        }
 
-        $scope.login= function(form){
+        OrderFactory.load_orders().then(function (response) {
+            console.log(response);
+            $scope.myOrders= response.list;
+        });
 
-
+        $scope.continue = function () {
+            $state.go('app.menu');
         };
 
+        $scope.reorder_meal = function (id) {
+
+        }
     }
 ]);

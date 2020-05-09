@@ -42,7 +42,6 @@ mcDonaldApp.factory("CartService", ['$rootScope','$http','$q',"$window",'$localS
             var users = $filter('filter')($rootScope.cart, function(value, index, array) {
                 return (value.id !== id);
             }, true);
-            console.log(id, users);
             $rootScope.cart = users;
             $localStorage.cart = users;
             deferred.resolve($localStorage.cart);

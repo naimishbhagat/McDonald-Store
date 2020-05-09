@@ -51,3 +51,22 @@ var http_config = {
         }
     }
 };
+
+mcDonaldApp.directive('uiDatepicker', function () {
+    return {
+        restrict: 'A',
+        require: 'ngModel',
+        link: function (scope, element, attrs, ngModelCtrl) {
+            element.datepicker({
+                dateFormat: 'dd-mm-yy',
+                minDate: new Date(),
+                onSelect: function (date) {
+                    ngModelCtrl.$setViewValue(date);
+                    ngModelCtrl.$render();
+                    //scope.date = date;
+                    scope.$apply();
+                }
+            });
+        }
+    };
+});
