@@ -1,7 +1,8 @@
 <div class="main-container banner" ng-controller="createMealController">
     <div class="headtitle">
         <div class="container">
-            <div class="col-xs-12 text-center" ng-show="userInfo != null">
+            <div class="col-xs-12 text-center">
+                <h2>Create your own meal</h2>
                 <span class="text-weight-medium">Please select meal from below menu, </span><span class="text-weight-heavy text-capitalize" ng-bind="userInfo.name"></span>
             </div>
             <div data-ng-repeat="item in menu_items">
