@@ -4,9 +4,6 @@
             <div class="head banner">
                 <ul class="slides">
                     <li class="item">
-                        <!--<div class="category&#45;&#45;hero-image">
-                            <img class="mobile" src="https://mcdonalds.com.au/sites/mcdonalds.com.au/files/Product-Menu-Full-Menu-Mobile-201904.jpg" alt="" title="" draggable="false">
-                        </div>-->
                         <div class="inner-container">
                             <div class="category--description-container">
                                 <h1>Full Menu</h1>
@@ -18,8 +15,58 @@
             </div>
         </div>
         <div class="container">
-            <div class="col-xs-12 text-center">
+            <div class="col-xs-12 text-center" ng-show="userInfo != null">
                 <span class="text-weight-medium">Welcome, </span><span class="text-weight-heavy text-capitalize" ng-bind="userInfo.first_name"></span>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-white no-radius text-center">
+                        <div class="panel-body">
+                            <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-smile-o fa-stack-1x fa-inverse"></i> </span>
+                            <h2 class="StepTitle">Create your own meal</h2>
+                            <p class="text-small">
+                                To add items to cart and create your favourite meal.
+                            </p>
+                            <p class="links cl-effect-1">
+                                <a ui-sref="app.menu">
+                                    Get Started
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-white no-radius text-center">
+                        <div class="panel-body">
+                            <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-paperclip fa-stack-1x fa-inverse"></i> </span>
+                            <h2 class="StepTitle">Select a pre-set meal</h2>
+                            <p class="text-small">
+                                Purchase McDonald's favourite meals
+                            </p>
+                            <p class="cl-effect-1">
+                                <a ui-sref="app.menu">
+                                    Find more
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panel panel-white no-radius text-center">
+                        <div class="panel-body">
+                            <span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i class="fa fa-terminal fa-stack-1x fa-inverse"></i> </span>
+                            <h2 class="StepTitle">Sign In</h2>
+                            <p class="text-small">
+                                Login to the system and reorder your favourite meal.
+                            </p>
+                            <p class="links cl-effect-1">
+                                <a ui-sref="app.login">
+                                    Login
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
