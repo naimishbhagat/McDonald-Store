@@ -6,6 +6,7 @@ mcDonaldApp.controller('cartController', ['$scope','$state', '$http','$location'
         });
 
         $scope.total_cart = 0;
+
         $scope.pay = function () {
             if($localStorage.userInfo !=null){
                 $state.go('app.payment');
@@ -24,13 +25,23 @@ mcDonaldApp.controller('cartController', ['$scope','$state', '$http','$location'
             return '$'+parseFloat(item_total).toFixed(2);
         };
 
-        $scope.sub_item_total = function(items){
+        $scope.sub_item_unit_total = function(item){
             var sub_item_total =0;
-            angular.forEach(items, function (value) {
-                sub_item_total = value.qty * value.price;
+            angular.forEach(item.items, function (value) {
+                sub_item_total += value.qty * value.price;
             });
+            item.price = sub_item_total;
             return '$'+sub_item_total.toFixed(2);
-        }
+        };
+
+        $scope.sub_item_overall_total = function(item){
+            var overall = 0, sub_item_total=0;
+            angular.forEach(item.items, function (value) {
+                sub_item_total += value.qty * value.price;
+            });
+            overall += item.qty * sub_item_total;
+            return '$'+overall.toFixed(2);
+        };
 
         $scope.total_cart = function(){
             var total = 0;
@@ -38,7 +49,7 @@ mcDonaldApp.controller('cartController', ['$scope','$state', '$http','$location'
                 total += (item.qty * item.price);
             });
             return '$'+total.toFixed(2);
-        }
+        };
 
         $scope.clearCart = function () {
             CartService.clear_cart().then(function(response){

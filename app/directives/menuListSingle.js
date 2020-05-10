@@ -20,7 +20,7 @@ mcDonaldApp.directive('menuListSingle', function($localStorage,$rootScope,$state
                 if(exist_menu.length == 0){
                     $localStorage.cart.push($localStorage.my_meal);
                 }
-            }
+            };
 
             //check if same item exist either as meal or my-own meal item then add qty
             scope.add_qty_if_item_exist = function(items,selectedMenu){
@@ -30,26 +30,24 @@ mcDonaldApp.directive('menuListSingle', function($localStorage,$rootScope,$state
                         return value.qty;
                     }
                 }, true);
-            }
+            };
 
             scope.update_my_meal = function(my_meal){
-                console.log(my_meal);
                 $filter('filter')( $localStorage.cart,  function(value, index, array) {
                     if(value.type == 'my-own'){
                         value = my_meal;
                         return value;
                     }
                 }, true);
-            }
+            };
 
             scope.calculate_price = function(items){
                 var total = 0;
                 angular.forEach(items , function(value) {
-                    console.log(value);
                     total += value.qty * value.price;
                 });
                 return total;
-            }
+            };
 
             scope.addtocart = function(selectedMenu){
                 if(selectedMenu.qty > 0){

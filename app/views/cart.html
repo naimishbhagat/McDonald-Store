@@ -23,7 +23,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr data-ng-repeat="item in cart" ng-show="item.type == 'my-own'">
+                            <tr data-ng-repeat="item in cart" ng-if="item.type == 'my-own'">
                                 <td><img ng-src="{{ item.image }}" alt="{{item.meal}}" class="img-thumbnail" width="60" /> </td>
                                 <td>
                                     <input type="text" ng-model="item.name" value="{{item.name}}" style="margin-bottom: 10px;width:100%;    " class="input-lg"/>
@@ -38,17 +38,17 @@
                                         </tbody>
                                     </table>
                                 </td>
-                                <td ng-bind="sub_item_total(item.items)">$0.00</td>
+                                <td ng-bind="sub_item_unit_total(item)">$0.00</td>
                                 <td><input type="number" ng-model="item.qty" class="qty" style="width:50px;" name="qty" /></td>
-                                <td ng-bind="item_total(item)">$0.00</td>
+                                <td ng-model="item.price" ng-bind="sub_item_overall_total(item)">$0.00</td>
                                 <td><a ng-click="remove_item(item.id)" class="btn btn-danger del">Delete</a></td>
                             </tr>
-                            <tr data-ng-repeat="item in cart"  ng-show="item.type !== 'my-own'">
+                            <tr data-ng-repeat="item in cart"  ng-if="item.type !== 'my-own'">
                                 <td><img ng-src="{{ item.image }}" alt="{{item.meal}}" class="img-thumbnail" width="60" /> </td>
                                 <td>{{ item.name }}</td>
                                 <td>${{ item.price }}</td>
                                 <td><input type="number" ng-model="item.qty" class="qty" style="width:50px;" name="qty" /></td>
-                                <td ng-bind="item_total(item)">$0.00</td>
+                                <td ng-model="item.price" ng-bind="item_total(item)">$0.00</td>
                                 <td><a ng-click="remove_item(item.id)" class="btn btn-danger del">Delete</a></td>
                             </tr>
                         </tbody>
