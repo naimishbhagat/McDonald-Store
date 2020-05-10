@@ -2,26 +2,33 @@
   {
     "id":1,
     "user_id":1,
-    "order_date": "2020-05-09 13:00:00",
+    "order_date": "1589154677",
     "meal":{
       "id":9,
       "qty": 1,
       "name": "my-favourite-meal",
+      "type": "my-own",
       "items":[
         {
           "id":2,
           "name":"Cheese Burger",
-          "image":"/images/cheese-burger.png"
+          "image":"/images/cheese-burger.png",
+          "price":"14",
+          "qty":7
         },
         {
           "id":8,
           "name":"Diet Coke",
-          "image":"/images/coke-classic.png"
+          "image":"/images/coke-classic.png",
+          "price":"4",
+          "qty":1
         },
         {
           "id":4,
           "name":"Fries",
-          "image":"/images/fries.png"
+          "image":"/images/fries.png",
+          "price":"10",
+          "qty":3
         }
       ],
       "price": 28
@@ -30,10 +37,11 @@
   {
     "id":2,
     "user_id":1,
-    "order_date": "2020-05-09 13:00:00",
+    "order_date": "1589154277",
     "meal":{
       "id":10,
       "qty": 1,
+      "type": "pre-set",
       "name": "cheese-burger-meal",
       "image":"/images/happy-hamburger.jpeg",
       "items": [{"id":2,"meal":"Cheese Burger","image":"/images/cheese-burger.png","price":2,"qty":2}],
@@ -43,10 +51,11 @@
   {
     "id":3,
     "user_id":1,
-    "order_date": "2020-05-09 13:00:00",
+    "order_date": "1589154677",
     "meal":{
       "id":7,
       "qty": 1,
+      "type": "pre-set",
       "name":"Happy Meal",
       "image":"/images/happy-hamburger.jpeg",
       "price": 12.00,
@@ -72,11 +81,12 @@
   {
     "id":4,
     "user_id":2,
-    "order_date": "2020-05-09 13:00:00",
+    "order_date": "1589154677",
     "meal":{
       "id":9,
       "qty": 1,
       "name": "sumit-favourite-meal",
+      "type": "my-own",
       "items":[
         {
           "id":2,
@@ -100,10 +110,11 @@
   {
     "id":5,
     "user_id":2,
-    "order_date": "2020-05-09 13:00:00",
+    "order_date": "1589154677",
     "meal":{
       "id":10,
       "qty": 1,
+      "type": "my-own",
       "name": "sumit-cheese-burger-meal",
       "image":"/images/happy-hamburger.jpeg",
       "items": [{"id":2,"meal":"Cheese Burger","image":"/images/cheese-burger.png","price":2,"qty":2}],
@@ -113,11 +124,12 @@
   {
     "id":6,
     "user_id":2,
-    "order_date": "2020-05-09 13:00:00",
+    "order_date": "1589154677",
     "meal":{
       "id":7,
       "qty": 1,
-      "name":"Sumit Happy Meal",
+      "name":"Happy Meal",
+      "type": "pre-set",
       "image":"/images/happy-hamburger.jpeg",
       "price": 12.00,
       "items":[
