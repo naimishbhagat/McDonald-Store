@@ -41,14 +41,7 @@ mcDonaldApp.factory("AuthService", ['$rootScope','$http','$q',"$window",'$localS
         }
 
         function getUserOrders(){
-            var deferred = $q.defer();
-            var profile_id = $localStorage.userInfo.registereduser.profile_id;
-            OrderFactory.read(profile_id).then(function(response) {
-                if (response.success) {
-                    deferred.resolve($rootScope.user_profile);
-                }
-            });
-            return deferred.promise;
+            return $localStorage.orders;
         }
 
         function logout() {

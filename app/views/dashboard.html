@@ -18,12 +18,12 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr data-ng-repeat="order in myOrders">
-                                <td>{{ order.meal.name }}</td>
-                                <td>{{ order.order_date}}</td>
-                                <td>${{order.meal.price}}</td>
-                                <td><a ng-click="reorder_meal(item.id)" class="btn btn-danger del">Reorder</a></td>
-                            </tr>
+                                <tr data-ng-repeat="order in myOrders">
+                                    <td>{{ order.meal.name }}</td>
+                                    <td>{{ order.order_date}}</td>
+                                    <td>${{order.meal.price}}</td>
+                                    <td><a ng-click="reorder_meal(item.id)" class="btn btn-danger del">Reorder</a></td>
+                                </tr>
                             </tbody>
                         </table>
                     </form>

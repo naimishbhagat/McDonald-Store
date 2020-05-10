@@ -7,6 +7,8 @@ mcDonaldApp.controller('navController', ['$scope', '$http','$rootScope','$locati
         //console.log($cookies.get('remember_me'));
         $scope.logout = function () {
             $localStorage.userInfo = null;
+            $localStorage.orders = null;
+            $localStorage.myOrders = null;
             $state.go('app.home', {}, {reload: true});
         }
     }
