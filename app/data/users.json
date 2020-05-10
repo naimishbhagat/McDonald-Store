@@ -1,13 +1,17 @@
 [
   {
     "id":1,
-    "name":"Naimish",
+    "first_name":"Naimish",
+    "last_name":"Bhagat",
+    "phone_number":"0433333333",
     "email":"naimish@example.com",
     "password":"naimish123"
   },
   {
     "id":2,
-    "name":"Sumit",
+    "first_name":"Sumit",
+    "last_name":"Joshi",
+    "phone_number":"0433333333",
     "email":"sumit@example.com",
     "password":"sumit123"
   }
