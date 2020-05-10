@@ -46,8 +46,8 @@ mcDonaldApp.controller('loginController', ['$scope','$state', '$http','$location
             if(form.validate()) {
                 AuthService.login($scope.user.username, $scope.user.password).then(function () {
                     $state.go('app.dashboard', {}, {reload: true});
-                },function (error) {
-
+                }, function (error) {
+                    swal({ title: "Error!",text: error,  type: "error", showCancelButton: true,timer: 2000});
                 });
             }
         };

@@ -25,6 +25,7 @@ mcDonaldApp.directive('menuListSingle', function($localStorage,$rootScope,$state
                 }else{
                     $localStorage.cart.push(selectedMenu);
                 }
+                swal({ title: "Success!",text: 'Meal has been added to cart',  type: "success", showCancelButton: true,timer: 1000});
             }
         },
         templateUrl: function(elm, attr){
