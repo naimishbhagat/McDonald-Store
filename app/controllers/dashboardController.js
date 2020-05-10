@@ -1,8 +1,6 @@
 mcDonaldApp.controller('dashboardController', ['$scope','$state', '$http','$location','$localStorage','$filter','$cookies','OrderFactory',
     function ($scope,$state, $http,$location,$localStorage,$filter,$cookies,OrderFactory) {
-        $scope.userInfo = $localStorage.userInfo;
         $scope.user = {};
-
         // load pre saved orders
         OrderFactory.load_orders().then(function (response) {
             $scope.myOrders=   $filter('filter')( response.list, {user_id: $scope.userInfo.id},true);
@@ -20,7 +18,6 @@ mcDonaldApp.controller('dashboardController', ['$scope','$state', '$http','$loca
             var order =  $filter('filter')( $scope.myOrders, {id: id},true);
             var selectedMenu = order[0].meal;
             var exist =  $filter('filter')( $localStorage.cart, {id: id},true);
-            console.log(exist);
             $localStorage.cart.push(selectedMenu);
 
         }
