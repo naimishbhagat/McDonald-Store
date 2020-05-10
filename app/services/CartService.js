@@ -40,12 +40,28 @@ mcDonaldApp.factory("CartService", ['$rootScope','$http','$q',"$window",'$localS
         function delete_item(id){
             var deferred = $q.defer();
             var users = $filter('filter')($rootScope.cart, function(value, index, array) {
+                if(id == null){
+                    reset_my_meal();
+                }
                 return (value.id !== id);
             }, true);
             $rootScope.cart = users;
             $localStorage.cart = users;
             deferred.resolve($localStorage.cart);
             return deferred.promise;
+        }
+
+        function reset_my_meal(){
+            $localStorage.my_meal = {
+                "id" : null,
+                "name": 'My Own Meal',
+                "price": 0,
+                "qty":1,
+                "type": "my-own",
+                "image": '/images/my-own.png',
+                "meal_type": "meal",
+                "items": [],
+            }
         }
     }
 ]);

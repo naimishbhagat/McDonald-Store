@@ -3,7 +3,9 @@
     "id":1,
     "name":"Big Mac® Combo Meal.",
     "image":"/images/big-mac-combo.jpg",
+    "type": "pre-set",
     "price": 20.00,
+    "meal_type": "meal",
     "items":[
       {
         "id":1,
@@ -26,7 +28,9 @@
     "id":2,
     "name":"Cheeseburger Combo Meal.",
     "image":"/images/cheeseburger-combo.jpg",
+    "type": "pre-set",
     "price": 12.00,
+    "meal_type": "meal",
     "items":[
       {
         "id":2,
@@ -49,7 +53,9 @@
     "id":3,
     "name":"Quarter Pounder with Cheese Meal",
     "image":"/images/quarter-ponder.jpg",
+    "type": "pre-set",
     "price": 17.00,
+    "meal_type": "meal",
     "items":[
       {
         "id":2,
@@ -72,7 +78,9 @@
     "id":4,
     "name":"Artisan Grilled Chicken Sandwich Meal",
     "image":"/images/artisan-grilled-chicken.jpg",
+    "type": "pre-set",
     "price": 13.00,
+    "meal_type": "meal",
     "items":[
       {
         "id":2,
@@ -95,7 +103,9 @@
     "id":5,
     "name":"Buttermilk Crispy Chicken Sandwich meal",
     "image":"/images/butter-milk-sandwich.jpg",
+    "type": "pre-set",
     "price": 15.00,
+    "meal_type": "meal",
     "items":[
       {
         "id":2,
@@ -118,7 +128,9 @@
     "id":6,
     "name":"10 piece chicken McNuggets Meal",
     "image":"/images/10-chicken-nuggets.jpg",
+    "type": "pre-set",
     "price": 12.00,
+    "meal_type": "meal",
     "items":[
       {
         "id":2,
@@ -141,7 +153,9 @@
     "id":7,
     "name":"Happy Meal",
     "image":"/images/happy-hamburger.jpeg",
+    "type": "pre-set",
     "price": 12.00,
+    "meal_type": "meal",
     "items":[
       {
         "id":2,
@@ -164,7 +178,9 @@
     "id":8,
     "name":"Sausage, Egg & cheese McGriddles Meal",
     "image":"/images/sausage-egg-cheese-meals.jpg",
+    "type": "pre-set",
     "price": 13.00,
+    "meal_type": "meal",
     "items":[
       {
         "id":2,

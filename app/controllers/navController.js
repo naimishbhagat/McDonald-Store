@@ -4,7 +4,7 @@ mcDonaldApp.controller('navController', ['$scope', '$http','$rootScope','$locati
         $scope.status = {
             isopen: false
         };
-        //console.log($cookies.get('remember_me'));
+
         $scope.logout = function () {
             $localStorage.userInfo = null;
             $localStorage.orders = null;

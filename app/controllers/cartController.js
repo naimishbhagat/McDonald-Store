@@ -24,6 +24,14 @@ mcDonaldApp.controller('cartController', ['$scope','$state', '$http','$location'
             return '$'+parseFloat(item_total).toFixed(2);
         };
 
+        $scope.sub_item_total = function(items){
+            var sub_item_total =0;
+            angular.forEach(items, function (value) {
+                sub_item_total = value.qty * value.price;
+            });
+            return '$'+sub_item_total.toFixed(2);
+        }
+
         $scope.total_cart = function(){
             var total = 0;
             angular.forEach($scope.cart, function (item) {

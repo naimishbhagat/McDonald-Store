@@ -22,7 +22,6 @@ mcDonaldApp.controller('mainCtrl', ['$rootScope', '$scope', '$state', '$localSto
         $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
             //stop loading bar on stateChangeSuccess
             event.targetScope.$watch("$viewContentLoaded", function() {
-                console.log('sdds');
                // cfpLoadingBar.complete();
             });
 
@@ -32,7 +31,6 @@ mcDonaldApp.controller('mainCtrl', ['$rootScope', '$scope', '$state', '$localSto
                 top : 'auto'
             });
 
-            console.log($localStorage.userInfo);
             if($localStorage.userInfo != null){
                 $rootScope.userInfo = $localStorage.userInfo;
             }else{
@@ -79,13 +77,9 @@ mcDonaldApp.controller('mainCtrl', ['$rootScope', '$scope', '$state', '$localSto
 
         // State not found
         $rootScope.$on('$stateNotFound', function(event, unfoundState, fromState, fromParams,error) {
-            console.log(error);
             //$rootScope.loading = false;
-            console.log(unfoundState.to);
             // "lazy.state"
-            console.log(unfoundState.toParams);
             // {a:1, b:2}
-            console.log(unfoundState.options);
             // {inherit:false} + default options
         });
 
