@@ -19,6 +19,8 @@ mcDonaldApp.controller('dashboardController', ['$scope','$state', '$http','$loca
             }
             var order =  $filter('filter')( $scope.myOrders, {id: id},true);
             var selectedMenu = order[0].meal;
+            var exist =  $filter('filter')( $localStorage.cart, {id: id},true);
+            console.log(exist);
             $localStorage.cart.push(selectedMenu);
 
         }

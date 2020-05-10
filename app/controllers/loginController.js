@@ -3,7 +3,6 @@ mcDonaldApp.controller('loginController', ['$scope','$state', '$http','$location
         $scope.userInfo = null;
         $localStorage.userInfo = null;
         $scope.user = {};
-
         if($cookies.get('remember_me')){
             $scope.user.remember = true;
             $scope.user.username = $cookies.get('user_name');
@@ -46,7 +45,7 @@ mcDonaldApp.controller('loginController', ['$scope','$state', '$http','$location
         $scope.login = function(form){
             if(form.validate()) {
                 AuthService.login($scope.user.username, $scope.user.password).then(function () {
-                    $state.go('app.dashboard');
+                    $state.go('app.dashboard', {}, {reload: true});
                 },function (error) {
 
                 });

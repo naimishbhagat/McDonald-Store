@@ -1,10 +1,10 @@
 <div class="navbar-collapse collapse" uib-collapse="navbarCollapsed" ng-init="navbarCollapsed = true" off-click="navbarCollapsed = true" off-click-if='!navbarCollapsed' off-click-filter="#menu-toggler">
     <!-- start: MAIN NAVIGATION MENU -->
     <ul class="nav navbar-nav navbar-right" ct-fullheight="window" data-ct-fullheight-exclusion="header" data-ct-fullheight-if="isSmallDevice">
-        <li ng-class="{'active': $state.includes('app.home')}" ng-show="userInfo == null">
+        <li ng-class="{'active': $state.includes('app.home')}" ng-if="userInfo == null">
             <a data-ui-sref="app.home">Home</a>
         </li>
-        <li ng-class="{'active': $state.includes('app.dashboard')}" ng-show="userInfo !== null">
+        <li ng-class="{'active': $state.includes('app.dashboard')}" ng-if="userInfo !== null">
             <a data-ui-sref="app.dashboard">Dashboard</a>
         </li>
         <li ng-class="{'active': $state.includes('app.create_meal')}">
@@ -16,11 +16,11 @@
         <li ng-class="{'active': $state.includes('app.cart')}">
             <a data-ui-sref="app.cart">Cart({{cart.length}})</a>
         </li>
-        <li ng-class="{'active': $state.includes('app.login')}" ng-show="userInfo == null">
+        <li ng-class="{'active': $state.includes('app.login')}" ng-if="userInfo == null">
             <a data-ui-sref="app.login">Login</a>
         </li>
-        <li ng-class="{'active': $state.includes('app.logout')}" ng-show="userInfo != null">
-            <a data-ui-sref="app.login">Logout</a>
+        <li ng-class="{'active': $state.includes('app.logout')}" ng-if="userInfo != null">
+            <a ng-click="logout()">Logout</a>
         </li>
 
     </ul>

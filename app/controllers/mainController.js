@@ -31,6 +31,7 @@ mcDonaldApp.controller('mainCtrl', ['$rootScope', '$scope', '$state', '$localSto
                 top : 'auto'
             });
 
+            console.log($localStorage.userInfo);
             if($localStorage.userInfo != null){
                 $rootScope.userInfo = $localStorage.userInfo;
             }else{
@@ -67,10 +68,8 @@ mcDonaldApp.controller('mainCtrl', ['$rootScope', '$scope', '$state', '$localSto
         });
 
         $rootScope.$on("$stateChangeError", function (event, toState, toParams, fromState, fromParams, error)  {
-            //console.log(error);
             if (error.authenticated == false) {
                 $localStorage.userInfo = null;
-                console.log('not authenticated');
                 $state.go("app.login");
             }
             if (error.permissiondenied == true) {

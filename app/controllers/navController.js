@@ -1,5 +1,6 @@
-mcDonaldApp.controller('navController', ['$scope', '$http','$rootScope','$location','$state','$localStorage','$cookies',
-    function ($scope, $http,$rootScope,$location,$state,$localStorage,$cookies) {
+mcDonaldApp.controller('navController', ['$scope', '$http','$rootScope','$location','$state','$localStorage',
+    function ($scope, $http,$rootScope,$location,$state,$localStorage) {
+        console.log($localStorage.userInfo);
         $scope.userInfo = $localStorage.userInfo;
         $scope.status = {
             isopen: false
@@ -7,6 +8,7 @@ mcDonaldApp.controller('navController', ['$scope', '$http','$rootScope','$locati
         //console.log($cookies.get('remember_me'));
         $scope.logout = function () {
             $localStorage.userInfo = null;
+            $state.go('app.home', {}, {reload: true});
         }
     }
 ]);
