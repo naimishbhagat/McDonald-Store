@@ -1,6 +1,5 @@
 mcDonaldApp.controller('navController', ['$scope', '$http','$rootScope','$location','$state','$localStorage',
     function ($scope, $http,$rootScope,$location,$state,$localStorage) {
-        console.log($localStorage.userInfo);
         $scope.userInfo = $localStorage.userInfo;
         $scope.status = {
             isopen: false

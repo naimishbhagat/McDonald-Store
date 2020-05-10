@@ -22,7 +22,8 @@ mcDonaldApp.controller('mainCtrl', ['$rootScope', '$scope', '$state', '$localSto
         $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
             //stop loading bar on stateChangeSuccess
             event.targetScope.$watch("$viewContentLoaded", function() {
-                cfpLoadingBar.complete();
+                console.log('sdds');
+               // cfpLoadingBar.complete();
             });
 
             // scroll top the page on change state
@@ -45,12 +46,10 @@ mcDonaldApp.controller('mainCtrl', ['$rootScope', '$scope', '$state', '$localSto
                 $rootScope.cart = $localStorage.cart;
             }
 
+
+            console.log($localStorage.users);
+
             //As we are using localstorage for existing users
-            if ($localStorage.users == 'undefined' || $localStorage.users == null || $localStorage.users.length == 0) {
-                userFactory.load_users().then(function (response) {
-                    $localStorage.users = response.list;
-                });
-            }
 
             $('footer').show();
 
@@ -89,6 +88,15 @@ mcDonaldApp.controller('mainCtrl', ['$rootScope', '$scope', '$state', '$localSto
             console.log(unfoundState.options);
             // {inherit:false} + default options
         });
+
+        $scope.load_users = function(){
+            if ($localStorage.users == 'undefined' || $localStorage.users == null || $localStorage.users.length == 0) {
+                userFactory.load_users().then(function (response) {
+                    $localStorage.users = response.list;
+                });
+            }
+        };
+        $scope.load_users();
 
         $rootScope.pageTitle = function() {
             return $rootScope.app.name + ' - ' + ($rootScope.currTitle || $rootScope.app.description);
