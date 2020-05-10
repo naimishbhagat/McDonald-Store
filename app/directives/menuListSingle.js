@@ -14,18 +14,20 @@ mcDonaldApp.directive('menuListSingle', function($localStorage,$rootScope,$state
                 $rootScope.cart = $localStorage.cart;
             }
             scope.addtocart = function(selectedMenu){
-                var exist =  $filter('filter')( $localStorage.cart, {id: selectedMenu.id},true);
-                if(exist.length >0 ){
-                    $filter('filter')($localStorage.cart, function(value, index, array) {
-                        if(value.id == selectedMenu.id){
-                            value.qty += selectedMenu.qty;
-                            return value.qty;
-                        }
-                    }, true);
-                }else{
-                    $localStorage.cart.push(selectedMenu);
+                if(selectedMenu.qty > 0){
+                    var exist =  $filter('filter')( $localStorage.cart, {id: selectedMenu.id},true);
+                    if(exist.length >0 ){
+                        $filter('filter')($localStorage.cart, function(value, index, array) {
+                            if(value.id == selectedMenu.id){
+                                value.qty += selectedMenu.qty;
+                                return value.qty;
+                            }
+                        }, true);
+                    }else{
+                        $localStorage.cart.push(selectedMenu);
+                    }
+                    swal({ title: "Success!",text: 'Meal has been added to cart',  type: "success", showCancelButton: true,timer: 1000});
                 }
-                swal({ title: "Success!",text: 'Meal has been added to cart',  type: "success", showCancelButton: true,timer: 1000});
             }
         },
         templateUrl: function(elm, attr){
