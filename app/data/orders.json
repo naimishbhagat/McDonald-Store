@@ -8,6 +8,7 @@
       "qty": 1,
       "name": "my-favourite-meal",
       "type": "my-own",
+      "image":"/images/my-own.png",
       "items":[
         {
           "id":2,

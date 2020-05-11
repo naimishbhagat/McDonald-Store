@@ -12,9 +12,8 @@
                         <table width="100%" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>Details</th>
+                                    <th>Order Details</th>
                                     <th>Date</th>
-                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -22,7 +21,7 @@
                                     <td>
                                         <table  width="100%" class="table table-bordered table-striped">
                                             <tbody>
-                                                <tr data-ng-repeat="item in order.meal" ng-if="item.meal.type == 'my-own'">
+                                                <tr data-ng-repeat="item in order.meal" ng-if="item.type == 'my-own'">
                                                     <td><img ng-src="{{ item.image }}" alt="{{item.meal}}" class="img-thumbnail" width="60" /> </td>
                                                     <td>
                                                         {{item.name}}
@@ -38,23 +37,20 @@
                                                         </table>
                                                     </td>
                                                     <td ng-bind="sub_item_unit_total(item)">$0.00</td>
-                                                    <td><input type="number" ng-model="item.qty" class="qty" style="width:50px;" name="qty" /></td>
                                                     <td ng-model="item.price" ng-bind="sub_item_overall_total(item)">$0.00</td>
-                                                    <td><a ng-click="remove_item(item.id)" class="btn btn-danger del">Delete</a></td>
+                                                    <td><a ng-click="reorder_meal(item.id)" class="btn btn-danger del">Reorder</a></td>
                                                 </tr>
                                                 <tr data-ng-repeat="item in order.meal"  ng-if="item.type !== 'my-own'">
                                                     <td><img ng-src="{{ item.image }}" alt="{{item.meal}}" class="img-thumbnail" width="60" /> </td>
                                                     <td>{{ item.name }}</td>
                                                     <td>${{ item.price }}</td>
-                                                    <td><input type="number" ng-model="item.qty" class="qty" style="width:50px;" name="qty" /></td>
                                                     <td ng-model="item.price" ng-bind="item_total(item)">$0.00</td>
-                                                    <td><a ng-click="remove_item(item.id)" class="btn btn-danger del">Delete</a></td>
+                                                    <td><a ng-click="remove_item(item.id)" class="btn btn-danger del">Reorder</a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </td>
                                     <td>{{ order.order_date|date}}</td>
-                                    <td><a ng-click="reorder_meal(item.id)" class="btn btn-danger del">Reorder</a></td>
                                 </tr>
                             </tbody>
                         </table>
