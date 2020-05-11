@@ -4,7 +4,7 @@
         <li ng-class="{'active': $state.includes('app.home')}" ng-if="userInfo == null">
             <a data-ui-sref="app.home">Home</a>
         </li>
-        <li ng-class="{'active': $state.includes('app.dashboard')}" ng-if="userInfo !== null">
+        <li ng-class="{'active': $state.includes('app.dashboard')}" ng-if="userInfo != null">
             <a data-ui-sref="app.dashboard">Dashboard</a>
         </li>
         <li ng-class="{'active': $state.includes('app.create_meal')}">
