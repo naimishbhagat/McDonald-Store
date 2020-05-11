@@ -44,9 +44,6 @@ mcDonaldApp.controller('mainCtrl', ['$rootScope', '$scope', '$state', '$localSto
                 $rootScope.cart = $localStorage.cart;
             }
 
-
-            console.log($localStorage.users);
-
             //As we are using localstorage for existing users
 
             $('footer').show();
