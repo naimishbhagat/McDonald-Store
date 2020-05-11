@@ -3,7 +3,7 @@
     "id":1,
     "user_id":1,
     "order_date": "1589154677",
-    "meal":{
+    "meal":[{
       "id":9,
       "qty": 1,
       "name": "my-favourite-meal",
@@ -32,13 +32,13 @@
         }
       ],
       "price": 28
-    }
+    }]
   },
   {
     "id":2,
     "user_id":1,
     "order_date": "1589154277",
-    "meal":{
+    "meal":[{
       "id":10,
       "qty": 1,
       "type": "pre-set",
@@ -46,13 +46,13 @@
       "image":"/images/happy-hamburger.jpeg",
       "items": [{"id":2,"meal":"Cheese Burger","image":"/images/cheese-burger.png","price":2,"qty":2}],
       "price": 28
-    }
+    }]
   },
   {
     "id":3,
     "user_id":1,
     "order_date": "1589154677",
-    "meal":{
+    "meal":[{
       "id":7,
       "qty": 1,
       "type": "pre-set",
@@ -76,13 +76,13 @@
           "image":"/images/fries.png"
         }
       ]
-    }
+    }]
   },
   {
     "id":4,
     "user_id":2,
     "order_date": "1589154677",
-    "meal":{
+    "meal":[{
       "id":9,
       "qty": 1,
       "name": "sumit-favourite-meal",
@@ -105,13 +105,13 @@
         }
       ],
       "price": 28
-    }
+    }]
   },
   {
     "id":5,
     "user_id":2,
     "order_date": "1589154677",
-    "meal":{
+    "meal":[{
       "id":10,
       "qty": 1,
       "type": "my-own",
@@ -119,13 +119,13 @@
       "image":"/images/happy-hamburger.jpeg",
       "items": [{"id":2,"meal":"Cheese Burger","image":"/images/cheese-burger.png","price":2,"qty":2}],
       "price": 28
-    }
+    }]
   },
   {
     "id":6,
     "user_id":2,
     "order_date": "1589154677",
-    "meal":{
+    "meal":[{
       "id":7,
       "qty": 1,
       "name":"Happy Meal",
@@ -149,6 +149,6 @@
           "image":"/images/fries.png"
         }
       ]
-    }
+    }]
   }
 ]

@@ -22,7 +22,7 @@
                                     <td>
                                         <table  width="100%" class="table table-bordered table-striped">
                                             <tbody>
-                                                <tr data-ng-repeat="item in order.meal" ng-if="item.type == 'my-own'">
+                                                <tr data-ng-repeat="item in order.meal" ng-if="item.meal.type == 'my-own'">
                                                     <td><img ng-src="{{ item.image }}" alt="{{item.meal}}" class="img-thumbnail" width="60" /> </td>
                                                     <td>
                                                         {{item.name}}
