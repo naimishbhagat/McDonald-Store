@@ -39,14 +39,14 @@
                                                     <td>{{item.qty}}</td>
                                                     <td>${{item.price}}</td>
                                                     <td ng-model="item.price" ng-bind="sub_item_overall_total(item)">$0.00</td>
-                                                    <td><a ng-click="reorder_meal(item.id)" class="btn btn-danger del">Reorder</a></td>
+                                                    <td><a ng-click="reorder_meal(order,item)" class="btn btn-danger del">Reorder</a></td>
                                                 </tr>
                                                 <tr data-ng-repeat="item in order.meal"  ng-if="item.type !== 'my-own'">
                                                     <td><img ng-src="{{ item.image }}" alt="{{item.meal}}" class="img-thumbnail" width="60" /> </td>
                                                     <td>{{ item.name }}</td>
                                                     <td>${{ item.price }}</td>
                                                     <td ng-model="item.price" ng-bind="item_total(item)">$0.00</td>
-                                                    <td><a ng-click="remove_item(item.id)" class="btn btn-danger del">Reorder</a></td>
+                                                    <td><a ng-click="reorder_meal(order,item)" class="btn btn-danger del">Reorder</a></td>
                                                 </tr>
                                             </tbody>
                                         </table>

@@ -18,13 +18,16 @@ mcDonaldApp.controller('dashboardController', ['$scope','$state', '$http','$loca
         };
 
         //Reorder from saved meals
-        $scope.reorder_meal = function (id) {
+        $scope.reorder_meal = function (order,item) {
             if ($localStorage.cart == 'undefined' || $localStorage.cart == null) {
                 $localStorage.cart = [];
             }
-            var order =  $filter('filter')( $scope.myOrders, {id: id},true);
-            var selectedMenu = order[0].meal;
-            var exist =  $filter('filter')( $localStorage.cart, {id: id},true);
+            var order =  $filter('filter')( $scope.myOrders, {id: order.id},true);
+            var order_item =  $filter('filter')( order[0].meal, {id:item.id,type: item.type},true);
+
+            var selectedMenu = order_item[0];
+            console.log(selectedMenu);
+            //var exist =  $filter('filter')( $localStorage.cart, {id: id},true);
             $localStorage.cart.push(selectedMenu);
 
         }
